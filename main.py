@@ -1,11 +1,16 @@
-import tkinter as tk
+from __future__ import annotations
+
+from ursina import Ursina
 
 
-def main():
-    root = tk.Tk()
-    root.title("SpaceBot")
-    root.geometry("1024x768")
-    root.mainloop()
+def _create_app() -> Ursina:
+    return Ursina(title="SpaceBot", size=(1024, 768))
+
+
+def main() -> None:
+    """Launch the SpaceBot application window and enter the main run loop."""
+    app = _create_app()
+    app.run()
 
 
 if __name__ == "__main__":

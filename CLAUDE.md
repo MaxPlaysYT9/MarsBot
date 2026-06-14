@@ -12,6 +12,8 @@
 
 - **[WORKFLOW-1] Plan non-trivial changes with OpenSpec before writing code.** Any change that touches more than one file, introduces a new abstraction, or modifies existing behaviour must have an OpenSpec plan agreed upon first. Do not write implementation code until the plan is approved.
 - **[WORKFLOW-2] Experiment before applying.** Before writing code into the actual source files, create a throwaway `experiment_<topic>.py` file and verify the approach works. If the experiment succeeds, apply the logic to the real codebase and delete the experiment file. If it fails, iterate on the experiment until it works.
+- **[WORKFLOW-3] Run experiment files with `uv`.** Every `experiment_<topic>.py` file must be executed via `uv run experiment_<topic>.py`, never with `python` directly.
+- **[WORKFLOW-4] Add dependencies with `uv`, never `pip`.** All package installations must use `uv add <package>`. Never use `pip install`.
 
 ## Architecture Decision Records (ADRs)
 
