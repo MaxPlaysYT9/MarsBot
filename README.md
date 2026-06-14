@@ -27,4 +27,4 @@ This project is in early development. Features above describe the intended scope
 
 ## License
 
-To be determined.
+[MIT](LICENSE) — Copyright (c) 2026 Mihnea Andrei Cosnita
